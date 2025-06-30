@@ -1,0 +1,86 @@
+/* Mengimpor font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* Pengaturan dasar untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Mengatur body untuk menengahkan kalkulator */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+/* Kontainer utama kalkulator */
+.calculator {
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+    border: 1px solid #717377;
+}
+
+/* Styling untuk layar display */
+#display {
+    width: 100%;
+    height: 90px;
+    border: none;
+    background: transparent;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: right;
+    font-size: 3rem;
+    color: #ffffff;
+    cursor: default;
+}
+
+#display::placeholder {
+    color: #ffffff;
+}
+
+/* Kontainer untuk tombol-tombol */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Styling dasar untuk semua tombol */
+button {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%; /* Membuat tombol menjadi bulat */
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Efek saat tombol ditekan */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Styling khusus untuk tombol '=' */
+.equals {
+    background-color: #fb7c14;
+    grid-column: span 2; /* Membuat tombol = lebih lebar */
+    width: auto;
+    border-radius: 35px;
+}
+
+/* Styling khusus untuk tombol operator */
+.operator {
+    color: #6dee0a;
+}
